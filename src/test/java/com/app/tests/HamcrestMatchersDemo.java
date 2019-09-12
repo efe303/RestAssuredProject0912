@@ -16,10 +16,13 @@ public class HamcrestMatchersDemo {
     @Test
     public void test(){
         assertThat(1, equalTo(1));
+        assertThat("settar",equalTo("settar"));
         String str1 = "Kunkka";
         String str2 = "Kunkka";
         // verify if first argument is equal to the second
         assertThat(str1, is("Kunkka"));
+        assertThat(str1,is("Kunkka"));
+        assertThat(str1,is(not("settar")));
         assertThat(str1, is(str2));
 
         // verify if first argument is NOT equal to the second
@@ -36,6 +39,8 @@ public class HamcrestMatchersDemo {
         assertThat(10, greaterThan(9));
         assertThat(10, lessThan(11));
         assertThat(10, lessThanOrEqualTo(11));
+        assertThat(54,lessThan(76));
+
 
         // CMD+D  duplicate line
         // CTRL+D duplicate line

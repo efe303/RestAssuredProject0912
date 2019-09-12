@@ -35,7 +35,9 @@ public class StudentResourceEndToEnd {
 
         String expectedMessage = "user "+firstName+" "+lastName+" has been added to database.";
 
+
         String token = BookITRestUtility.getTeacherToken();
+
 
         given().
                 log().all().
